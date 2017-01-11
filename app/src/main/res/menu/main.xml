@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.apollo.apollochat.ui.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/icon_action_search"
+        android:showAsAction="always"
+        android:title="@string/action_search" />
+    <item
+        android:id="@+id/action_plus"
+        android:icon="@mipmap/icon_action_plus"
+        android:showAsAction="always"
+        android:title="@string/action_search" />
+
+</menu>
