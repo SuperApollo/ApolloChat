@@ -8,4 +8,9 @@
     <string name="login_remember">记住用户</string>
     <string name="login_register">注册</string>
     <string name="login_login">登录</string>
+    <string name="tab_message">信息</string>
+    <string name="tab_contacts">联系人</string>
+    <string name="plus_one">加一</string>
+    <string name="plus_two">加二</string>
+    <string name="plus_three">加三</string>
 </resources>

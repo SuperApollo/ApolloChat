@@ -11,6 +11,7 @@
     <item
         android:id="@+id/action_plus"
         android:icon="@mipmap/icon_action_plus"
+        android:actionProviderClass=""
         android:showAsAction="ifRoom"
         android:title="@string/action_search" />
     <item

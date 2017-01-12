@@ -45,7 +45,7 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     public boolean onMenuOpened(int featureId, Menu menu) {
-        //利用发射获取menubuilder类，调用setOptionalIconsVisible方法设置为true，显示overflow里的action按钮的图标
+        //利用反射获取menubuilder类，调用setOptionalIconsVisible方法设置为true，显示overflow里的action按钮的图标
         if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
             if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
                 try {
