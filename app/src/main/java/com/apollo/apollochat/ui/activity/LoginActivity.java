@@ -1,5 +1,6 @@
 package com.apollo.apollochat.ui.activity;
 
+import android.app.ActionBar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -33,12 +34,13 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected int getMenuLayoutId() {
-        return 0;
+        return -1;
     }
 
     @Override
     protected void initView() {
-
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     /**

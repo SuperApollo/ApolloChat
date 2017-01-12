@@ -6,10 +6,12 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.ViewConfiguration;
+import android.view.Window;
 
 import com.apollo.apollochat.ui.utils.ToastUtils;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import butterknife.ButterKnife;
 
@@ -33,9 +35,30 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(getMenuLayoutId(), menu);
-        return super.onCreateOptionsMenu(menu);
+        int id = getMenuLayoutId();
+        if (id != -1) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(id, menu);
+            return true;
+        } else
+            return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        //利用发射获取menubuilder类，调用setOptionalIconsVisible方法设置为true，显示overflow里的action按钮的图标
+        if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
+            if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
+                try {
+                    Method m = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                    m.setAccessible(true);
+                    m.invoke(menu, true);
+                } catch (Exception e) {
+                }
+            }
+        }
+
+        return super.onMenuOpened(featureId, menu);
     }
 
     /**
@@ -53,7 +76,7 @@ public abstract class BaseActivity extends FragmentActivity {
     }
 
     /**
-     * 获取布局id
+     * 获取布局id,之类若没有布局需返回-1
      *
      * @return 布局id
      */

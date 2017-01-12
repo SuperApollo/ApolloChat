@@ -4,13 +4,14 @@
     tools:context="com.apollo.apollochat.ui.MainActivity">
     <item
         android:id="@+id/action_search"
+        android:actionViewClass="android.widget.SearchView"
         android:icon="@mipmap/icon_action_search"
-        android:showAsAction="always"
+        android:showAsAction="ifRoom|collapseActionView"
         android:title="@string/action_search" />
     <item
         android:id="@+id/action_plus"
         android:icon="@mipmap/icon_action_plus"
-        android:showAsAction="always"
+        android:showAsAction="ifRoom"
         android:title="@string/action_search" />
     <item
         android:id="@+id/action_setting"
