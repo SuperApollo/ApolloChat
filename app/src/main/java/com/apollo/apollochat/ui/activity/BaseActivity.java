@@ -20,7 +20,6 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseActivity extends FragmentActivity {
-
     protected ToastUtils mToastUtils;
 
     @Override
