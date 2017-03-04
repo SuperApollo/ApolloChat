@@ -6,6 +6,7 @@
     <string name="login_name">请输入用户名</string>
     <string name="login_pass">请输入密码</string>
     <string name="login_remember">记住用户</string>
+    <string name="login_forget">忘记密码?</string>
     <string name="login_register">注册</string>
     <string name="login_login">登录</string>
     <string name="tab_message">信息</string>
