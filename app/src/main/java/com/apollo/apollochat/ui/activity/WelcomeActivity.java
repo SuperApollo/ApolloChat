@@ -41,7 +41,7 @@ public class WelcomeActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        Log.i("121212","ddddddddddd");
+        Log.i("WelcomeActivity","启动======================");
         mHandler.sendEmptyMessageDelayed(FINISH_CURRENT, 3000);
     }
 
