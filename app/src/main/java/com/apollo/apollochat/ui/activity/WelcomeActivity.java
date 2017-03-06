@@ -1,7 +1,6 @@
 package com.apollo.apollochat.ui.activity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
